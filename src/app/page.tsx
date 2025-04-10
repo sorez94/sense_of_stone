@@ -176,7 +176,7 @@ export default function Home() {
                     />
                 </a>
                 <a
-                    href="https://neshan.org/maps/places/QbvbTY0xM3fm#c35.663-51.351-18z-0p"
+                    href="https://nshn.ir/QbvbTY0xM3fm"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ display: 'flex' }}
@@ -189,13 +189,26 @@ export default function Home() {
                     />
                 </a>
                 <a
-                    href="https://www.google.com/maps?q=Tehran,+E+Yaft+Abad+St,+M972+35M+%D9%85%D8%B1%DA%A9%D8%B2+%D8%AE%D8%B1%DB%8C%D8%AF+%D9%85%D8%AF%D8%B1%D9%86+%D8%B3%D9%86%D8%AA%D8%B1&ftid=0x3f8e010001a27fb3:0x6a0b5f0c5126dc92&entry=gps&lucs=,94259550,94242592,94224825,94227247,94227248,94231188,47071704,47069508,94218641,94203019,47084304,94208458,94208447&g_ep=CAISEjI1LjA1LjMuNzIwMTgwNTk0MBgAIMi8Byp1LDk0MjU5NTUwLDk0MjQyNTkyLDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjE4NjQxLDk0MjAzMDE5LDQ3MDg0MzA0LDk0MjA4NDU4LDk0MjA4NDQ3QgJJUg%3D%3D&g_st=com.google.maps.preview.copy%D8%AD"
+                    href="https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA?g_st=com.google.maps.preview.copy%D8%AD"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ display: 'flex' }}
                 >
                     <Image
                         src="/google-maps.png"
+                        alt="instagram"
+                        width={isMobile ? 32 : 44}
+                        height={isMobile ? 32 : 44}
+                    />
+                </a>
+                <a
+                    href="https://waze.com/ul/htnkdbs0nw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: 'flex' }}
+                >
+                    <Image
+                        src="/waze.png"
                         alt="instagram"
                         width={isMobile ? 32 : 44}
                         height={isMobile ? 32 : 44}
