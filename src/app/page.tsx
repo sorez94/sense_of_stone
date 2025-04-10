@@ -176,40 +176,55 @@ export default function Home() {
                     />
                 </a>
                 <a
-                    href="https://nshn.ir/QbvbTY0xM3fm"
+                    href={isMobile ? 'neshan://open?lat=35.699739&lng=51.338097' : 'https://nshn.ir/QbvbTY0xM3fm'}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ display: 'flex' }}
+                    onClick={(e) => {
+                        if (isMobile) {
+                            // Optional: Handle cases where the app isn't installed
+                            e.preventDefault();
+                            window.location.href = 'neshan://open?lat=35.699739&lng=51.338097';
+                            setTimeout(() => {
+                                // Fallback to web if the app doesn't open after 2 seconds
+                                window.location.href = 'https://nshn.ir/QbvbTY0xM3fm';
+                            }, 2000);
+                        }
+                    }}
                 >
                     <Image
                         src="/neshan.png"
-                        alt="instagram"
+                        alt="neshan"
                         width={isMobile ? 34 : 46}
                         height={isMobile ? 34 : 46}
                     />
                 </a>
                 <a
-                    href="https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA?g_st=com.google.maps.preview.copy%D8%AD"
+                    href={
+                        isMobile
+                            ? 'comgooglemaps://?q=35.699739,51.338097&center=35.699739,51.338097'
+                            : 'https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA'
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ display: 'flex' }}
                 >
                     <Image
                         src="/google-maps.png"
-                        alt="instagram"
+                        alt="google maps"
                         width={isMobile ? 32 : 44}
                         height={isMobile ? 32 : 44}
                     />
                 </a>
                 <a
-                    href="https://waze.com/ul/htnkdbs0nw"
+                    href={isMobile ? 'waze://?ll=35.699739,51.338097&navigate=yes' : 'https://waze.com/ul/htnkdbs0nw'}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ display: 'flex' }}
                 >
                     <Image
                         src="/waze.png"
-                        alt="instagram"
+                        alt="waze"
                         width={isMobile ? 32 : 44}
                         height={isMobile ? 32 : 44}
                     />
