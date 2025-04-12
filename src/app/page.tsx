@@ -4,33 +4,29 @@ import { FaInstagram } from 'react-icons/fa6';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import {bold} from "next/dist/lib/picocolors";
 
 export default function Home() {
     const [isMobile, setIsMobile] = useState(false);
 
-    // Detect screen size on mount and resize
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 768); // Mobile breakpoint at 768px
+            setIsMobile(window.innerWidth < 768);
         };
-        handleResize(); // Initial check
+        handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-
-    const handleClick = () => {};
 
     return (
         <div
             style={{
                 display: 'flex',
                 flexDirection: 'column',
+                justifyContent: 'space-between',
                 alignItems: 'center',
-                justifyContent: 'start',
                 position: 'relative',
                 minHeight: '100vh',
-                overflow: 'hidden',
-                padding: isMobile ? '10px' : '20px', // Reduced padding on mobile
             }}
         >
             {/* Top-Left Quarter Circle */}
@@ -39,7 +35,7 @@ export default function Home() {
                     position: 'absolute',
                     top: 0,
                     left: 0,
-                    width: isMobile ? 100 : 250, // Smaller on mobile
+                    width: isMobile ? 100 : 250,
                     height: isMobile ? 100 : 250,
                     backgroundColor: '#C1D790',
                     borderBottomRightRadius: '100%',
@@ -61,174 +57,193 @@ export default function Home() {
                 }}
             />
 
-            {/* Logo */}
-            <Image
-                src="/senseofstone.png"
-                alt="senseofstone"
-                width={isMobile ? 150 : 213} // Smaller logo on mobile
-                height={isMobile ? 124 : 176}
-                style={{ objectFit: 'contain' }}
-            />
-
-            {/* Coming Soon Section */}
+            {/* Main Content Wrapper */}
             <div
                 style={{
                     display: 'flex',
-                    flexDirection: isMobile ? 'column' : 'row', // Stack vertically on mobile
-                    justifyContent: 'center',
+                    flexDirection: 'column',
                     alignItems: 'center',
-                    marginTop: isMobile ? 50 : 132, // Reduced margin on mobile
-                    gap: isMobile ? 10 : 20,
+                    width: '100%',
                 }}
             >
-                <h1
-                    style={{
-                        fontSize: isMobile ? 36 : 60, // Smaller font on mobile
-                        fontWeight: 'bold',
-                        textAlign: isMobile ? 'center' : 'left',
-                    }}
-                >
-                    Coming Soon...
-                </h1>
+                {/* Logo */}
+                <>
                 <Image
-                    src="/rocket.png"
-                    alt="rocket"
-                    width={isMobile ? 50 : 70} // Smaller rocket on mobile
-                    height={isMobile ? 50 : 70}
-                    style={{ height: isMobile ? 50 : 70 }}
+                    src="/logo.png"
+                    alt="senseofstone"
+                    width={isMobile ? 120 : 213}
+                    height={isMobile ? 90 : 176}
+                    style={{ objectFit: 'contain',
+                        marginTop: isMobile ? 15 : 25}}
                 />
-            </div>
+                    <h1 style={{color: '#8C5831', fontSize: isMobile ? 14 : 24, fontWeight: 'bold', marginTop: isMobile ? 5 : 10 }}>Sense Of Stone</h1>
+                </>
 
-            {/* Description Text */}
-            <p
-                style={{
-                    marginTop: isMobile ? 20 : 40,
-                    fontSize: isMobile ? 16 : 24, // Smaller font on mobile
-                    textAlign: isMobile ? 'center' : 'center',
-                    padding: isMobile ? '0 20px' : 0, // Add side padding on mobile
-                    maxWidth: isMobile ? '90%' : '100%',
-                }}
-            >
-                <span style={{ fontWeight: 'bold' }}>Sense Of Stone</span> website will be
-                launched any moment. Until then, you can keep in touch with us by the links
-                below
-            </p>
-
-            <div
-                style={{
-                    marginTop: isMobile ? 20 : 30,
-                    textAlign: 'center',
-                    fontSize: isMobile ? 14 : 18,
-                    padding: isMobile ? '0 20px' : 0,
-                    maxWidth: isMobile ? '90%' : '100%',
-                }}
-            >
-                <p style={{ fontWeight: 'bold', margin: 0 }}>Working Hours:</p>
-                <p style={{ margin: 0 }}>Every day except official holidays</p>
-                <p style={{ margin: 0 }}>From 10 AM to 8 PM</p>
-            </div>
-
-            {/* Social Media Icons */}
-            <div
-                style={{
-                    display: 'flex',
-                    gap: isMobile ? 8 : 20, // Smaller gap on mobile
-                    marginTop: isMobile ? 20 : 30,
-                }}
-            >
-                <a
-                    href="https://wa.me/+989124845654"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'flex' }}
-                >
-                    <Image
-                        src="/whatsapp.png"
-                        alt="whatsapp"
-                        width={isMobile ? 32 : 44} // Smaller icons on mobile
-                        height={isMobile ? 32 : 44}
-                    />
-                </a>
-                <a
-                    href="https://wa.me/+989127116788"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'flex' }}
-                >
-                    <Image
-                        src="/whatsapp.png"
-                        alt="whatsapp"
-                        width={isMobile ? 32 : 44}
-                        height={isMobile ? 32 : 44}
-                    />
-                </a>
-                <a
-                    href="https://www.instagram.com/SenseOfStone"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'flex' }}
-                >
-                    <Image
-                        src="/instagram.png"
-                        alt="instagram"
-                        width={isMobile ? 32 : 44}
-                        height={isMobile ? 32 : 44}
-                    />
-                </a>
-                <a
-                    href={isMobile ? 'neshan://open?lat=35.699739&lng=51.338097' : 'https://nshn.ir/QbvbTY0xM3fm'}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'flex' }}
-                    onClick={(e) => {
-                        if (isMobile) {
-                            // Optional: Handle cases where the app isn't installed
-                            e.preventDefault();
-                            window.location.href = 'neshan://open?lat=35.699739&lng=51.338097';
-                            setTimeout(() => {
-                                // Fallback to web if the app doesn't open after 2 seconds
-                                window.location.href = 'https://nshn.ir/QbvbTY0xM3fm';
-                            }, 2000);
-                        }
+                {/* Coming Soon Section */}
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: isMobile ? 'column' : 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        marginTop: isMobile ? 35 : 132,
+                        gap: isMobile ? 5 : 20,
                     }}
                 >
+                    <h1
+                        style={{
+                            fontSize: isMobile ? 26 : 60,
+                            fontWeight: 'bold',
+                            textAlign: isMobile ? 'center' : 'left',
+                        }}
+                    >
+                        Coming Soon...
+                    </h1>
                     <Image
-                        src="/neshan.png"
-                        alt="neshan"
-                        width={isMobile ? 34 : 46}
-                        height={isMobile ? 34 : 46}
+                        src="/rocket.png"
+                        alt="rocket"
+                        width={isMobile ? 35 : 70}
+                        height={isMobile ? 35 : 70}
+                        style={{ height: isMobile ? 35 : 70 }}
                     />
-                </a>
-                <a
-                    href={
-                        isMobile
-                            ? 'comgooglemaps://?q=35.699739,51.338097&center=35.699739,51.338097'
-                            : 'https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA'
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'flex' }}
+                </div>
+
+                {/* Description */}
+                <p
+                    style={{
+                        marginTop: isMobile ? 20 : 40,
+                        fontSize: isMobile ? 13 : 24,
+                        textAlign: 'center',
+                        padding: isMobile ? '0 20px' : 0,
+                        maxWidth: isMobile ? '90%' : '100%',
+                    }}
                 >
-                    <Image
-                        src="/google-maps.png"
-                        alt="google maps"
-                        width={isMobile ? 32 : 44}
-                        height={isMobile ? 32 : 44}
-                    />
-                </a>
-                <a
-                    href={isMobile ? 'waze://?ll=35.699739,51.338097&navigate=yes' : 'https://waze.com/ul/htnkdbs0nw'}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'flex' }}
+                    <span style={{ fontWeight: 'bold' }}>Sense Of Stone</span> website will be
+                    launched any moment. Until then, you can keep in touch with us by the links
+                    below
+                </p>
+
+                {/* Working Hours */}
+                <div
+                    style={{
+                        marginTop: isMobile ? 20 : 30,
+                        textAlign: 'center',
+                        fontSize: isMobile ? 12 : 18,
+                        padding: isMobile ? '0 20px' : 0,
+                        maxWidth: isMobile ? '90%' : '100%',
+                    }}
                 >
-                    <Image
-                        src="/waze.png"
-                        alt="waze"
-                        width={isMobile ? 32 : 44}
-                        height={isMobile ? 32 : 44}
-                    />
-                </a>
+                    <p style={{ fontWeight: 'bold', margin: 0 }}>Working Hours:</p>
+                    <p style={{ margin: 0 }}>Every day except official holidays</p>
+                    <p style={{ margin: 0 }}>From 10 AM to 8 PM</p>
+                </div>
+
+                {/* Social Media Icons */}
+                <div
+                    style={{
+                        display: 'flex',
+                        gap: isMobile ? 10 : 20,
+                        marginTop: isMobile ? 15 : 30,
+                    }}
+                >
+                    <a
+                        href="https://wa.me/+989124845654"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ display: 'flex' }}
+                    >
+                        <Image
+                            src="/whatsapp.png"
+                            alt="whatsapp"
+                            width={isMobile ? 22 : 44}
+                            height={isMobile ? 22 : 44}
+                            style={{ height: isMobile ? 22 : 44 }}
+                        />
+                    </a>
+                    <a
+                        href="https://wa.me/+989127116788"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ display: 'flex' }}
+                    >
+                        <Image
+                            src="/whatsapp.png"
+                            alt="whatsapp"
+                            width={isMobile ? 22 : 44}
+                            height={isMobile ? 22 : 44}
+                            style={{ height: isMobile ? 22 : 44 }}
+                        />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/SenseOfStone"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ display: 'flex' }}
+                    >
+                        <Image
+                            src="/instagram.png"
+                            alt="instagram"
+                            width={isMobile ? 22 : 44}
+                            height={isMobile ? 22 : 44}
+                            style={{ height: isMobile ? 22 : 44 }}
+                        />
+                    </a>
+                    <a
+                        href={isMobile ? 'neshan://open?lat=35.699739&lng=51.338097' : 'https://nshn.ir/QbvbTY0xM3fm'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ display: 'flex' }}
+                        onClick={(e) => {
+                            if (isMobile) {
+                                e.preventDefault();
+                                window.location.href = 'neshan://open?lat=35.699739&lng=51.338097';
+                                setTimeout(() => {
+                                    window.location.href = 'https://nshn.ir/QbvbTY0xM3fm';
+                                }, 2000);
+                            }
+                        }}
+                    >
+                        <Image
+                            src="/neshan.png"
+                            alt="neshan"
+                            width={isMobile ? 22 : 44}
+                            height={isMobile ? 22 : 44}
+                            style={{ height: isMobile ? 22 : 44 }}
+                        />
+                    </a>
+                    <a
+                        href={
+                            isMobile
+                                ? 'comgooglemaps://?q=35.699739,51.338097&center=35.699739,51.338097'
+                                : 'https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA'
+                        }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ display: 'flex' }}
+                    >
+                        <Image
+                            src="/google-maps.png"
+                            alt="google maps"
+                            width={isMobile ? 22 : 44}
+                            height={isMobile ? 22 : 44}
+                            style={{ height: isMobile ? 22 : 44 }}
+                        />
+                    </a>
+                    <a
+                        href={isMobile ? 'waze://?ll=35.699739,51.338097&navigate=yes' : 'https://waze.com/ul/htnkdbs0nw'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ display: 'flex' }}
+                    >
+                        <Image
+                            src="/waze.png"
+                            alt="waze"
+                            width={isMobile ? 22 : 44}
+                            height={isMobile ? 22 : 44}
+                            style={{ height: isMobile ? 22 : 44 }}
+                        />
+                    </a>
+                </div>
             </div>
 
             {/* Footer */}
@@ -236,47 +251,30 @@ export default function Home() {
                 style={{
                     backgroundColor: '#C1D790',
                     width: '100%',
-                    height: isMobile ? 40 : 50, // Slightly shorter footer on mobile
-                    position: 'fixed',
-                    bottom: 0,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     zIndex: 1,
+                    padding: isMobile ? 5 : 10,
+                    marginTop: isMobile ? 20 : 60,
                 }}
             >
                 <p
                     style={{
                         textAlign: 'center',
+                        fontSize: isMobile ? 10 : 14,
                         backgroundColor: '#C1D790',
-                        fontSize: isMobile ? 14 : 16, // Smaller font on mobile
                         margin: 0,
                     }}
                 >
-                    Designed By
+                    Designed By{' '}
                     <a
                         href="https://www.sorez.org"
                         target="_blank"
                         style={{ textDecoration: 'none' }}
                     >
-                        <span
-                            style={{
-                                color: '#457EAB',
-                                backgroundColor: '#C1D790',
-                                fontWeight: 'bold',
-                            }}
-                        >
-                            So
-                        </span>
-                        <span
-                            style={{
-                                color: 'black',
-                                fontWeight: 'bold',
-                                backgroundColor: '#C1D790',
-                            }}
-                        >
-                            Rez
-                        </span>
+                        <span style={{ color: '#457EAB', fontWeight: 'bold', backgroundColor: '#C1D790' }}>So</span>
+                        <span style={{ color: 'black', fontWeight: 'bold', backgroundColor: '#C1D790' }}>Rez</span>
                     </a>
                 </p>
             </div>
