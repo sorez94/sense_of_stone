@@ -1,10 +1,6 @@
 'use client';
-import { FaWhatsapp } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa6';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import {bold} from "next/dist/lib/picocolors";
+import {useEffect, useState} from 'react';
 
 export default function Home() {
     const [isMobile, setIsMobile] = useState(false);
