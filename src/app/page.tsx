@@ -212,12 +212,7 @@ export default function Home() {
                         onClick={(e) => {
                             if (isMobile) {
                                 e.preventDefault();
-                                // تلاش برای باز کردن اپ Google Maps
-                                window.location.href = 'comgooglemaps://?q=35.66275496688838,51.350474901898224';
-                                // اگر نصب نبود، به نسخه وب هدایت کن
-                                setTimeout(() => {
-                                    window.location.href = 'https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA';
-                                }, 1500);
+                                window.location.href = 'https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA';
                             }
                         }}
                         target="_blank"
