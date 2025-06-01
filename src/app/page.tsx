@@ -64,15 +64,22 @@ export default function Home() {
             >
                 {/* Logo */}
                 <>
-                <Image
-                    src="/logo.png"
-                    alt="senseofstone"
-                    width={isMobile ? 120 : 213}
-                    height={isMobile ? 90 : 176}
-                    style={{ objectFit: 'contain',
-                        marginTop: isMobile ? 15 : 25}}
-                />
-                    <h1 style={{color: '#8C5831', fontSize: isMobile ? 14 : 24, fontWeight: 'bold', marginTop: isMobile ? 5 : 10 }}>Sense Of Stone</h1>
+                    <Image
+                        src="/logo.png"
+                        alt="senseofstone"
+                        width={isMobile ? 120 : 213}
+                        height={isMobile ? 90 : 176}
+                        style={{
+                            objectFit: 'contain',
+                            marginTop: isMobile ? 15 : 25
+                        }}
+                    />
+                    <h1 style={{
+                        color: '#8C5831',
+                        fontSize: isMobile ? 14 : 24,
+                        fontWeight: 'bold',
+                        marginTop: isMobile ? 5 : 10
+                    }}>Sense Of Stone</h1>
                 </>
 
                 {/* Coming Soon Section */}
@@ -82,7 +89,7 @@ export default function Home() {
                         flexDirection: isMobile ? 'column' : 'row',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        marginTop: isMobile ? 35 : 132,
+                        marginTop: isMobile ? 35 : 112,
                         gap: isMobile ? 5 : 20,
                     }}
                 >
@@ -100,7 +107,7 @@ export default function Home() {
                         alt="rocket"
                         width={isMobile ? 35 : 70}
                         height={isMobile ? 35 : 70}
-                        style={{ height: isMobile ? 35 : 70 }}
+                        style={{height: isMobile ? 35 : 70}}
                     />
                 </div>
 
@@ -111,14 +118,16 @@ export default function Home() {
                         fontSize: isMobile ? 13 : 24,
                         textAlign: 'center',
                         padding: isMobile ? '0 20px' : 0,
+                        margin: isMobile ? '10px 10px' : '50px 380px' ,
                         maxWidth: isMobile ? '90%' : '100%',
                     }}
                 >
-                    <span style={{ fontWeight: 'bold' }}>Sense Of Stone</span> website will be
+                    <span style={{fontWeight: 'bold'}}>Sense Of Stone</span> is a Tehran-based showroom offering
+                    high-quality, custom-designed stone products that blend natural
+                    beauty with modern craftsmanship—bringing a piece of nature into every home. website will be
                     launched any moment. Until then, you can keep in touch with us by the links
                     below
                 </p>
-
                 {/* Working Hours */}
                 <div
                     style={{
@@ -129,9 +138,9 @@ export default function Home() {
                         maxWidth: isMobile ? '90%' : '100%',
                     }}
                 >
-                    <p style={{ fontWeight: 'bold', margin: 0 }}>Working Hours:</p>
-                    <p style={{ margin: 0 }}>Every day except official holidays</p>
-                    <p style={{ margin: 0 }}>From 10 AM to 8 PM</p>
+                    <p style={{fontWeight: 'bold', margin: 0}}>Working Hours:</p>
+                    <p style={{margin: 0}}>Every day except official holidays</p>
+                    <p style={{margin: 0}}>From 10 AM to 8 PM</p>
                 </div>
 
                 {/* Social Media Icons */}
@@ -146,49 +155,49 @@ export default function Home() {
                         href="https://wa.me/+989124845654"
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'flex' }}
+                        style={{display: 'flex'}}
                     >
                         <Image
                             src="/whatsapp.png"
                             alt="whatsapp"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{ height: isMobile ? 22 : 44 }}
+                            style={{height: isMobile ? 22 : 44}}
                         />
                     </a>
                     <a
                         href="https://wa.me/+989127116788"
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'flex' }}
+                        style={{display: 'flex'}}
                     >
                         <Image
                             src="/whatsapp.png"
                             alt="whatsapp"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{ height: isMobile ? 22 : 44 }}
+                            style={{height: isMobile ? 22 : 44}}
                         />
                     </a>
                     <a
                         href="https://www.instagram.com/SenseOfStone"
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'flex' }}
+                        style={{display: 'flex'}}
                     >
                         <Image
                             src="/instagram.png"
                             alt="instagram"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{ height: isMobile ? 22 : 44 }}
+                            style={{height: isMobile ? 22 : 44}}
                         />
                     </a>
                     <a
                         href={isMobile ? 'neshan://open?lat=35.699739&lng=51.338097' : 'https://nshn.ir/QbvbTY0xM3fm'}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'flex' }}
+                        style={{display: 'flex'}}
                         onClick={(e) => {
                             if (isMobile) {
                                 e.preventDefault();
@@ -204,7 +213,7 @@ export default function Home() {
                             alt="neshan"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{ height: isMobile ? 22 : 44 }}
+                            style={{height: isMobile ? 22 : 44}}
                         />
                     </a>
                     <a
@@ -215,28 +224,28 @@ export default function Home() {
                         }
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'flex' }}
+                        style={{display: 'flex'}}
                     >
                         <Image
                             src="/google-maps.png"
                             alt="google maps"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{ height: isMobile ? 22 : 44 }}
+                            style={{height: isMobile ? 22 : 44}}
                         />
                     </a>
                     <a
                         href={isMobile ? 'waze://?ll=35.699739,51.338097&navigate=yes' : 'https://waze.com/ul/htnkdbs0nw'}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'flex' }}
+                        style={{display: 'flex'}}
                     >
                         <Image
                             src="/waze.png"
                             alt="waze"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{ height: isMobile ? 22 : 44 }}
+                            style={{height: isMobile ? 22 : 44}}
                         />
                     </a>
                 </div>
@@ -267,10 +276,10 @@ export default function Home() {
                     <a
                         href="https://www.sorez.org"
                         target="_blank"
-                        style={{ textDecoration: 'none' }}
+                        style={{textDecoration: 'none'}}
                     >
-                        <span style={{ color: '#457EAB', fontWeight: 'bold', backgroundColor: '#C1D790' }}>So</span>
-                        <span style={{ color: 'black', fontWeight: 'bold', backgroundColor: '#C1D790' }}>Rez</span>
+                        <span style={{color: '#457EAB', fontWeight: 'bold', backgroundColor: '#C1D790'}}>So</span>
+                        <span style={{color: 'black', fontWeight: 'bold', backgroundColor: '#C1D790'}}>Rez</span>
                     </a>
                 </p>
             </div>
