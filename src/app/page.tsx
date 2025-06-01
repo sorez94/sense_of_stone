@@ -194,7 +194,7 @@ export default function Home() {
                         />
                     </a>
                     <a
-                        href={isMobile ? 'neshan://open?lat=35.699739&lng=51.338097' : 'https://nshn.ir/QbvbTY0xM3fm'}
+                        href={'https://nshn.ir/?lat=35.699739&lng=51.338097'}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{display: 'flex'}}
