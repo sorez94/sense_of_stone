@@ -194,7 +194,7 @@ export default function Home() {
                         />
                     </a>
                     <a
-                        href={'https://nshn.ir/?lat=35.699739&lng=51.338097'}
+                        href={'https://nshn.ir/?lat=35.6627035&lng=51.350421999999995'}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{display: 'flex'}}
@@ -210,7 +210,7 @@ export default function Home() {
                     <a
                         href={
                             isMobile
-                                ? 'comgooglemaps://?q=35.699739,51.338097&center=35.699739,51.338097'
+                                ? 'comgooglemaps://?q=35.6627035,51.350421999999995&center=35.699739,51.338097'
                                 : 'https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA'
                         }
                         target="_blank"
@@ -226,7 +226,7 @@ export default function Home() {
                         />
                     </a>
                     <a
-                        href={isMobile ? 'waze://?ll=35.699739,51.338097&navigate=yes' : 'https://waze.com/ul/htnkdbs0nw'}
+                        href={isMobile ? 'waze://?ll=35.6627035,51.350421999999995&navigate=yes' : 'https://waze.com/ul/htnkdbs0nw'}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{display: 'flex'}}
