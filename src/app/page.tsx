@@ -194,7 +194,7 @@ export default function Home() {
                         />
                     </a>
                     <a
-                        href={'https://nshn.ir/?lat=35.6627035&lng=51.350421999999995'}
+                        href={'https://nshn.ir/?lat=35.66275496688838&lng=51.350474901898224'}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{display: 'flex'}}
@@ -208,35 +208,53 @@ export default function Home() {
                         />
                     </a>
                     <a
-                        href={
-                            isMobile
-                                ? 'comgooglemaps://?q=35.6627035,51.350421999999995&center=35.699739,51.338097'
-                                : 'https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA'
-                        }
+                        href="https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA"
+                        onClick={(e) => {
+                            if (isMobile) {
+                                e.preventDefault();
+                                // تلاش برای باز کردن اپ Google Maps
+                                window.location.href = 'comgooglemaps://?q=35.66275496688838,51.350474901898224';
+                                // اگر نصب نبود، به نسخه وب هدایت کن
+                                setTimeout(() => {
+                                    window.location.href = 'https://maps.app.goo.gl/JVCKkbbeFkX2ZgKXA';
+                                }, 1500);
+                            }
+                        }}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{display: 'flex'}}
+                        style={{ display: 'flex' }}
                     >
                         <Image
                             src="/google-maps.png"
                             alt="google maps"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{height: isMobile ? 22 : 44}}
+                            style={{ height: isMobile ? 22 : 44 }}
                         />
                     </a>
                     <a
-                        href={isMobile ? 'waze://?ll=35.6627035,51.350421999999995&navigate=yes' : 'https://waze.com/ul/htnkdbs0nw'}
+                        href="https://waze.com/ul/htnkdbs0nw"
+                        onClick={(e) => {
+                            if (isMobile) {
+                                e.preventDefault();
+                                // تلاش برای باز کردن اپ Waze
+                                window.location.href = 'waze://?ll=35.66275496688838,51.350474901898224&navigate=yes';
+                                // اگر نصب نبود، به نسخه وب هدایت کن
+                                setTimeout(() => {
+                                    window.location.href = 'https://waze.com/ul/htnkdbs0nw';
+                                }, 1500);
+                            }
+                        }}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{display: 'flex'}}
+                        style={{ display: 'flex' }}
                     >
                         <Image
                             src="/waze.png"
                             alt="waze"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{height: isMobile ? 22 : 44}}
+                            style={{ height: isMobile ? 22 : 44 }}
                         />
                     </a>
                 </div>
