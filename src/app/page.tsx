@@ -84,49 +84,50 @@ export default function Home() {
 
                 {/* Coming Soon Section */}
                 <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: isMobile ? 'column' : 'row',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        marginTop: isMobile ? 35 : 112,
-                        gap: isMobile ? 5 : 20,
-                    }}
+                    className={`
+    flex 
+    flex-col md:flex-row 
+    justify-center items-center 
+    gap-[5px] md:gap-[20px]
+    mt-[35px] md:mt-[15px] lg:mt-[20px] xl:mt-[30px] 2xl:mt-[30px]
+  `}
                 >
                     <h1
-                        style={{
-                            fontSize: isMobile ? 26 : 60,
-                            fontWeight: 'bold',
-                            textAlign: isMobile ? 'center' : 'left',
-                        }}
+                        className={`
+      font-bold 
+      text-center md:text-left
+      text-[26px] smd:text-[26px] lg:text-[32px] xl:text-[52px] 2xl:text-[52px]
+    `}
                     >
                         Coming Soon...
                     </h1>
-                    <Image
+
+                    <img
                         src="/rocket.png"
                         alt="rocket"
-                        width={isMobile ? 35 : 70}
-                        height={isMobile ? 35 : 70}
-                        style={{height: isMobile ? 35 : 70}}
+                        className={`
+      h-[26px] smd:h-[26px] lg:h-[32px] xl:h-[52px] 2xl:h-[52px] 
+      w-auto
+      md:mt-0
+    `}
                     />
                 </div>
 
                 {/* Description */}
                 <p
-                    style={{
-                        marginTop: isMobile ? 20 : 40,
-                        fontSize: isMobile ? 13 : 24,
-                        textAlign: 'center',
-                        padding: isMobile ? '0 20px' : 0,
-                        margin: isMobile ? '10px 10px' : '50px 380px' ,
-                        maxWidth: isMobile ? '90%' : '100%',
-                    }}
+                    className={`
+    text-[13px] sm:text-[16px] md:text-[18px] lg:text-[24px]
+    text-justify
+    px-5 sm:px-8 md:px-10 lg:px-0
+    mx-[10px] sm:mx-[40px] md:mx-[100px] lg:mx-[150px] xl:mx-[180px]
+    my-[10px] sm:my-[20px] md:my-[30px] lg:my-[50px]
+    max-w-[90%] sm:max-w-[95%] lg:max-w-full
+  `}
                 >
-                    <span style={{fontWeight: 'bold'}}>Sense Of Stone</span> is a Tehran-based showroom offering
+                    <span style={{ fontWeight: 'bold' }}>Sense Of Stone</span> is a Tehran-based showroom offering
                     high-quality, custom-designed stone products that blend natural
-                    beauty with modern craftsmanship—bringing a piece of nature into every home. website will be
-                    launched any moment. Until then, you can keep in touch with us by the links
-                    below
+                    beauty with modern craftsmanship—bringing a piece of nature into every home.
+                    Website will be launched any moment. Until then, you can keep in touch with us by the links below.
                 </p>
                 {/* Working Hours */}
                 <div
@@ -217,14 +218,14 @@ export default function Home() {
                         }}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'flex' }}
+                        style={{display: 'flex'}}
                     >
                         <Image
                             src="/google-maps.png"
                             alt="google maps"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{ height: isMobile ? 22 : 44 }}
+                            style={{height: isMobile ? 22 : 44}}
                         />
                     </a>
                     <a
@@ -242,14 +243,14 @@ export default function Home() {
                         }}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'flex' }}
+                        style={{display: 'flex'}}
                     >
                         <Image
                             src="/waze.png"
                             alt="waze"
                             width={isMobile ? 22 : 44}
                             height={isMobile ? 22 : 44}
-                            style={{ height: isMobile ? 22 : 44 }}
+                            style={{height: isMobile ? 22 : 44}}
                         />
                     </a>
                 </div>
