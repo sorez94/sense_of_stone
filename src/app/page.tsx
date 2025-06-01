@@ -198,15 +198,6 @@ export default function Home() {
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{display: 'flex'}}
-                        onClick={(e) => {
-                            if (isMobile) {
-                                e.preventDefault();
-                                window.location.href = 'neshan://open?lat=35.699739&lng=51.338097';
-                                setTimeout(() => {
-                                    window.location.href = 'https://nshn.ir/QbvbTY0xM3fm';
-                                }, 2000);
-                            }
-                        }}
                     >
                         <Image
                             src="/neshan.png"
