@@ -194,7 +194,7 @@ export default function Home() {
                         />
                     </a>
                     <a
-                        href={'https://nshn.ir/?lat=35.66275496688838&lng=51.350474901898224'}
+                        href={'https://nshn.ir/87QbvbTeQxM3fl'}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{display: 'flex'}}
