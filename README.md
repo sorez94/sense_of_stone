@@ -31,7 +31,7 @@ The current page serves as a temporary landing page until the full website is la
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/sense-of-stone-coming-soon.git
+git clone https://github.com/your-username/sense_of_stone.git
 cd sense-of-stone-coming-soon
 
 # Install dependencies
