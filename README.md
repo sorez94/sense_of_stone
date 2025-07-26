@@ -39,3 +39,8 @@ npm install
 
 # Run locally
 npm run dev
+```
+
+## 🚧 Status
+This is a temporary landing page.
+Full website launch coming soon — stay tuned!
