@@ -33,9 +33,11 @@ The current page serves as a temporary landing page until the full website is la
 > A preview of the current landing page:
 
 ![Screenshot - Desktop](./screenshots/desktop-preview.png)
+
 *Desktop view*
 
 ![Screenshot - Mobile](./screenshots/mobile-preview.png)
+
 *Mobile view*
 
 ---
